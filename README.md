@@ -24,6 +24,6 @@ Enter your password after the prompt:
 ## Acknowledgments
 
 * MediaWiki.org
-* [Old School RuneScape Wiki] (https://oldschool.runescape.wiki)
+* [Old School RuneScape Wiki](https://oldschool.runescape.wiki)
 
 
