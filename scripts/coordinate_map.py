@@ -46,5 +46,5 @@ for y in range(427,4850,480):
     draw.text((51,y-40),label, font=fnt, fill=(255,255,255,255))
     draw.text((8115,y-40),label, font=fnt, fill=(255,255,255,255))
 
-im.save("osrs_coordinate_map.png", "PNG")
+im.save("../output/osrs_coordinate_map.png", "PNG")
 
