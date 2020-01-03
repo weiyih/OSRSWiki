@@ -13,7 +13,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import sys
 
-im = Image.open("osrs_world_map_july18_2019.PNG")
+im = Image.open("../resources/osrs_world_map_july18_2019.PNG")
 fnt = ImageFont.truetype('/System/Library/Fonts/Helvetica.ttc', 80)
 
 #-3840 start of 40 degrees west
