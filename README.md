@@ -19,7 +19,7 @@ Enter your password after the prompt:
 
 ## Authors
 
-* **Kevin Wei** 
+* **Kevin W* 
 
 ## Acknowledgments
 
