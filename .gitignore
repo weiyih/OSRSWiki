@@ -208,6 +208,10 @@ dmypy.json
 
 # End of https://www.gitignore.io/api/python,pycharm,visualstudiocode
 
+# Output files
+!output/
+ouput/*
+
 # Testing
 test.py
 test.txt
