@@ -30,6 +30,8 @@ class AccountSession:
     def get_session(self):
         return self.session
 
+    # Login process
+    # TODO - Add retry 
     def login_bot(self):
         try:
             # login_attempt = 0
@@ -55,17 +57,7 @@ class AccountSession:
         except Exception as error:
             print(error)
 
-    def get_edit_token(self):
-        request_edit_token = self.session.get(self.API_URL, params={
-            'action': 'query',
-            'meta': 'tokens',
-            'format': 'json'
-        })
-
-        self.EDIT_TOKEN = request_edit_token.json()['query']['tokens']['csrftoken']
-        print(self.EDIT_TOKEN)
-        return
-
+    # Login token
     def get_login_token(self):
         try:
             request_token = self.session.get(self.API_URL, params={
@@ -75,12 +67,25 @@ class AccountSession:
                 'type': 'login'
             })
             token = request_token.json()['query']['tokens']['logintoken']
-            self.update_login_token(token)
+            self.set_login_token(token)
         except Exception as error:
             raise Exception(error)
-
         return
 
-    def update_login_token(self, token):
+    def set_login_token(self, token):
         self.LOGIN_TOKEN = token
+        return
+
+
+    # CSRF edit token
+    # TODO - Update CSRF token in case of expiry
+    def get_edit_token(self):
+        request_edit_token = self.session.get(self.API_URL, params={
+            'action': 'query',
+            'meta': 'tokens',
+            'format': 'json'
+        })
+
+        self.EDIT_TOKEN = request_edit_token.json()['query']['tokens']['csrftoken']
+        print(self.EDIT_TOKEN)
         return
