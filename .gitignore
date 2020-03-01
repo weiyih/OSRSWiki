@@ -207,3 +207,7 @@ dmypy.json
 .history
 
 # End of https://www.gitignore.io/api/python,pycharm,visualstudiocode
+
+# Testing
+test.py
+test.txt
